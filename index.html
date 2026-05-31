@@ -26,6 +26,7 @@
 
         <nav class="nav-links" aria-label="Section links">
           <a href="#about">About</a>
+          <a href="#game">Game</a>
           <a href="#snacks">Snacks</a>
           <a href="#tokenomics">Tokenomics</a>
           <a href="#join">Join</a>
@@ -50,24 +51,39 @@
       <main id="top">
         <section class="hero-section" aria-labelledby="hero-title">
           <div class="hero-copy">
-            <p class="eyebrow">Fresh from the candy box</p>
             <h1 id="hero-title">$Solnom</h1>
+            <p class="hero-lede">
+              A hungry little green legend chasing falling solankas, candy-box
+              chaos, and the next big bite on Solana.
+            </p>
             <div class="hero-stickers" aria-label="$Solnom highlights">
-              <span>Wide-eyed Solana snack hunter</span>
-              <span>Cartoon chaos</span>
-              <span>Hungry for green candles</span>
+              <span>Coin catcher</span>
+              <span>Snack drop game</span>
+              <span>0% tax bite</span>
             </div>
             <div class="hero-actions">
               <a class="button primary" href="#">Buy on Pump.fun</a>
-              <a class="button secondary" href="#about">Meet Solnom</a>
+              <a class="button secondary" href="#game">Play the game</a>
             </div>
           </div>
 
-          <div class="hero-art" aria-label="Solnom character collage">
+          <div class="hero-art" aria-label="Solnom mascot with Solana coins">
             <img
               class="hero-character"
-              src="assets/amnom2.jpg"
-              alt="Cute green monster holding a Solana coin"
+              src="assets/amnom-open-cut.png"
+              alt="Cute green monster with an open mouth"
+            />
+            <img
+              class="hero-coin hero-coin-one"
+              src="assets/solana-coin-cut.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="hero-coin hero-coin-two"
+              src="assets/solana-coin-cut.png"
+              alt=""
+              aria-hidden="true"
             />
           </div>
         </section>
@@ -77,6 +93,45 @@
           <span>Cartoon box energy</span>
           <span>Zero tax bite</span>
           <span>Solana snack crew</span>
+        </section>
+
+        <section class="game-section" id="game" aria-labelledby="game-title">
+          <div class="game-copy">
+            <p class="eyebrow">Snack drop</p>
+            <h2 id="game-title">Feed Solnom the falling solankas.</h2>
+            <p>
+              Move the open mouth under the coins, keep the streak alive, and
+              dodge the empty wrappers when the drop gets fast.
+            </p>
+          </div>
+
+          <div class="game-panel">
+            <div class="game-hud" aria-label="Game stats">
+              <div>
+                <span>Score</span>
+                <strong id="game-score">0</strong>
+              </div>
+              <div>
+                <span>Record</span>
+                <strong id="game-best">0</strong>
+              </div>
+              <div>
+                <span>Lives</span>
+                <strong id="game-lives">3</strong>
+              </div>
+            </div>
+            <canvas
+              id="snack-game"
+              width="920"
+              height="520"
+              tabindex="0"
+              aria-label="Mini game: move Solnom to catch falling Solana coins"
+            ></canvas>
+            <div class="game-controls">
+              <button class="button primary" id="game-start" type="button">Start drop</button>
+              <button class="button secondary" id="game-reset" type="button">Reset</button>
+            </div>
+          </div>
         </section>
 
         <section class="about-section" id="about" aria-labelledby="about-title">
